@@ -17,5 +17,5 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello Worlddddd"
-      - name: Print Hello Diogo
-        run: echo "Hello Diogo"
+      - name: Greet the Coolest Student
+        run: echo "Hello ${{ inputs.coolestStudent || 'anonymous' }}!!!"
