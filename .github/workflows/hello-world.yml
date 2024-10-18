@@ -18,6 +18,9 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Print Hello World
         run: echo "Hello Worlddddd"
       - name: Greet the Coolest Student
