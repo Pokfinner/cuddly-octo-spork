@@ -1,0 +1,15 @@
+name: My First CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello Worlddddd"
+      - name: Print Hello Diogo
+        run: echo "Hello Diogo"
