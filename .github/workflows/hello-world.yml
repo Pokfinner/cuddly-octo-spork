@@ -19,3 +19,5 @@ jobs:
         run: echo "Hello Worlddddd"
       - name: Greet the Coolest Student
         run: echo "Hello ${{ inputs.coolestStudent || 'anonymous' }}!!!"
+      - name: Show the Secret!
+        run: echo "The secret is ${{ secrets.DIOGO_TOKEN }}"
