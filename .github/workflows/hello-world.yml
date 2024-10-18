@@ -19,10 +19,5 @@ jobs:
         run: echo "Hello Worlddddd"
       - name: Greet the Coolest Student
         run: echo "Hello ${{ inputs.coolestStudent || 'anonymous' }}!!!"
-      - name: Check DIOGO_SECRET and print if it's cool
-        run: |
-          if [ "${{ secrets.DIOGO_SECRET }}" = "DIOGUERINO" ]; then
-            echo "cool";
-          else
-            echo "not cool";
-          fi
+      - name: Docker build
+        run: docker build -t pokfinner/cuddly-octo-spork:latest .
