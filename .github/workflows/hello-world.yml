@@ -10,6 +10,9 @@ on:
         description: "Heyo who the cool student"
         required: true
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   say_hello:
@@ -19,5 +22,9 @@ jobs:
         run: echo "Hello Worlddddd"
       - name: Greet the Coolest Student
         run: echo "Hello ${{ inputs.coolestStudent || 'anonymous' }}!!!"
+        
+      - name: Listing stuff
+        run: ls -la
+
       - name: Docker build
         run: docker build -t pokfinner/cuddly-octo-spork:latest .
