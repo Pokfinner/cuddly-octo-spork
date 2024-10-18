@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      coolestStudent:
+        description: "Heyo who the cool student"
+        required: true
+
 
 jobs:
   say_hello:
