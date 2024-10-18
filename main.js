@@ -1,1 +1,1 @@
-console.log("Hello from prod")
+console.log("Hello from dev")
