@@ -12,4 +12,6 @@ jobs:
       - name: Print Hello World
         run: echo "Hello Worlddddd"
       - name: Print Hello Diogo
-        run: echo "Hello Diogo"
+        run: echo "Hello Diogo"      
+      - name: Print Hello Diogo
+        run: echa
