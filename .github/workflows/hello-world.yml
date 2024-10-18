@@ -19,5 +19,10 @@ jobs:
         run: echo "Hello Worlddddd"
       - name: Greet the Coolest Student
         run: echo "Hello ${{ inputs.coolestStudent || 'anonymous' }}!!!"
-      - name: Show the Secret!
-        run: echo "The secret is ${{ secrets.DIOGO_TOKEN }}"
+      - name: Check DIOGO_SECRET and print if it's cool
+        run: |
+          if [ "${{ secrets.DIOGO_SECRET }}" = "DIOGUERINO" ]; then
+            echo "cool";
+          else
+            echo "not cool";
+          fi
